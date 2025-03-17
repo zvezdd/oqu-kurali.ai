@@ -15,7 +15,7 @@ const Chat = () => {
 
   return (
     <div className="chat-container">
-      <h2>Қазақша AI Чат (Gemini)</h2>
+      <h2>Oqu Qurali</h2>
       <textarea
         className="chat-input"
         value={message}

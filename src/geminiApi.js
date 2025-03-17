@@ -1,7 +1,7 @@
 import axios from 'axios';
 
-const API_KEY = 'AIzaSyCkqZi1gLos0cvdxZEcuwL2i5wH0D8RoWg';
-const API_URL = `https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent?key=${API_KEY}`;
+const API_KEY = 'AIzaSyBIg_nwSN4lKGeUKW60XDx9ussGkoteKU8';
+const API_URL = `https://generativelanguage.googleapis.com/v1/models/gemini-1.5-pro:generateContent?key=${API_KEY}`;
 
 export const askGemini = async (message) => {
   try {
@@ -9,7 +9,7 @@ export const askGemini = async (message) => {
       API_URL,
       {
         contents: [
-          { role: "user", parts: [{ text: `Тек қазақша жауап бер: ${message}` }] }
+          { parts: [{ text: `Тек қазақша жауап бер: ${message}` }] }
         ]
       }
     );
