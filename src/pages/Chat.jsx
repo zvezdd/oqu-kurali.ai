@@ -10,11 +10,12 @@ const Chat = () => {
     if (!message.trim()) return;
 
     setLoading(true);
-    setResponse(""); // Clear previous response
+    setResponse(""); 
 
     try {
       const reply = await askGemini(message);
       setResponse(reply);
+      setMessage('');
     } catch (error) {
       setResponse("Қате орын алды, кейінірек қайталап көріңіз.");
     } finally {
@@ -24,6 +25,9 @@ const Chat = () => {
 
   return (
     <div className="card">
+       <h1>
+            Талқылауды <span className="text-gradient">бастаңыз</span>
+          </h1>
       <div className="search">
         <input
           className=""

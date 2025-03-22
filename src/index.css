@@ -205,7 +205,7 @@ header img {
 }
 
 .navbar-item:hover {
-  color: #d6c7ff;
+  color: #e2d8ff;
 }
 
 .navbar-user {
@@ -253,6 +253,38 @@ header img {
     transform: rotate(360deg);
   }
 }
+
+.chat-response {
+  background: rgba(206, 206, 251, 0.1); /* Light purple transparent background */
+  border-left: 4px solid #AB8BFF; /* Accent border */
+  padding: 12px 16px;
+  margin: 20px auto; /* Centers the box horizontally */
+  border-radius: 8px;
+  font-size: 16px;
+  color: #E5E7EB; /* Light text color */
+  line-height: 1.6;
+  animation: fadeIn 0.3s ease-in-out;
+  max-width: 800px; /* Fixed width */
+  width: 100%; /* Ensures responsiveness */
+  word-wrap: break-word;
+  text-align: left; /* Keeps text aligned */
+  display: flex;
+  justify-content: center;
+}
+
+/* Smooth fade-in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
 
 .hide-scrollbar {
   -ms-overflow-style: none;

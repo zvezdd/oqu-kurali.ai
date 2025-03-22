@@ -1,13 +1,14 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Navbar = ({ user, handleLogout }) => {
   return (
+    
     <nav className="navbar">
       <h2>Oqu <span className="text-gradient">Quraly</span></h2>
       <div className="navbar-menu">
-        <a href="#" className="navbar-item">Home</a>
-        <a href="#" className="navbar-item">About</a>
-        <a href="#" className="navbar-item">Contact</a>
+        <Link to="/" className="navbar-item">Home</Link>
+        <Link to="/about" className="navbar-item">About</Link>
       </div>
       {user && (
         <div className="navbar-user">

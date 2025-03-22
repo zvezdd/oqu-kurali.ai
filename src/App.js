@@ -1,8 +1,10 @@
 import React, { useState } from "react";
-import Chat from "./components/Chat";
+import Chat from "./pages/Chat";
 import { signInWithGoogle, logOut } from "./firebase";
 import "./App.css";
 import Navbar from "./components/Navbar";
+import { Route, Routes } from "react-router-dom";
+import About from "./pages/About";
 
 function App() {
   const [user, setUser] = useState(null);
@@ -22,10 +24,11 @@ function App() {
       {user ? (
         <div>
           <Navbar user={user} handleLogout={handleLogout} />
-          <h1>
-            Талқылауды <span className="text-gradient">бастаңыз</span>
-          </h1>
-          <Chat />
+         
+          <Routes>
+            <Route path="/" element={<Chat/>}/>
+            <Route path="/about" element={<About/>}/>
+          </Routes>
         </div>
       ) : (
         <div>

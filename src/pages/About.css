@@ -1,0 +1,60 @@
+.about-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #030014;
+  }
+  
+  .about-card {
+    background-color: #0f0d23;
+    color: white;
+    text-align: center;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
+    max-width: 600px;
+    width: 90%;
+  }
+  
+  .profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 30%;
+    border: 3px solid #cecefb;
+    margin-bottom: 15px;
+  }
+  
+  .author-name {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .author-instagram {
+    color: #a8b5db;
+    font-size: 16px;
+  }
+  
+  .app-description {
+    margin-top: 15px;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #cecefb;
+  }
+  
+  .instagram-link {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 15px;
+    background-color: #cecefb;
+    color: #030014;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 8px;
+    transition: 0.3s;
+  }
+  
+  .instagram-link:hover {
+    background-color: #a8b5db;
+  }
+  
