@@ -1,10 +1,11 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Chat from "./pages/Chat";
 import { signInWithGoogle, logOut } from "./firebase";
 import "./App.css";
 import Navbar from "./components/Navbar";
 import { Route, Routes } from "react-router-dom";
 import About from "./pages/About";
+import icon from './images/icon.png'
 
 function App() {
   const [user, setUser] = useState(null);
@@ -18,6 +19,14 @@ function App() {
     await logOut();
     setUser(null);
   };
+
+  useEffect(() => {
+    const link = document.querySelector("link[rel*='icon']") || document.createElement('link');
+    link.type = 'image/png';
+    link.rel = 'icon';
+    link.href = icon;
+    document.head.appendChild(link);
+  }, []);
 
   return (
     <div className="App">
